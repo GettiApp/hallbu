@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="huw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hallbu Wiki - Article</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>{{articleTitle}}</h1>
+  <div id="articleContent"></div>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleName = urlParams.get('article');
+    // This part needs to be implemented to fetch the article content based on articleName
+    // You can use a database, file system, or a simple in-memory data structure
+    const articleContent = "Artikelse Inhalt häre (Article content here)";
+    document.getElementById('articleContent').textContent = articleContent;
+    document.title = `Hallbu Wiki - ${articleName}`;
+  </script>
+</body>
+</html>
