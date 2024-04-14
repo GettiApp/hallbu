@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="huw">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Hallbu Wiki - Creating Article</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <h1>Creating: {{articleName}}</h1>
+  <form action="articles.html" method="post">
+    <textarea name="articleContent" rows="10" cols="50" placeholder="Schreib dein Artikelse häre (Write your article here)"></textarea>
+    <br>
+    <button type="submit">Fertig (Done)</button>
+  </form>
+  <script>
+    const urlParams = new URLSearchParams(window.location.search);
+    const articleName = urlParams.get('articleName');
+    document.querySelector('h1').textContent += ` - ${articleName}`;
+  </script>
+</body>
+</html>
